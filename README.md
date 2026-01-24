@@ -1,7 +1,4 @@
 # Deep of Night Depth Widget - Usage Instructions
-
-## Previews
-
 ![Widget Preview](images/widget-preview.png)
 
 ## Setup in Streamlabs OBS
