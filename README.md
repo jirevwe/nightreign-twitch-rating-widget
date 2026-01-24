@@ -1,5 +1,9 @@
 # Deep of Night Depth Widget - Usage Instructions
 
+## Previews
+
+![Widget Preview](images/widget-preview.png)
+
 ## Setup in Streamlabs OBS
 
 1. **Add Browser Source:**
@@ -112,3 +116,7 @@ You: !points -400
 - Points are saved in browser localStorage
 - Don't clear browser cache in OBS settings
 - If you delete the browser source, points will reset
+
+## Additional Stuff
+
+![Widget Preview In Twitch.jpeg](images/widget-preview-in-twitch.jpeg)
