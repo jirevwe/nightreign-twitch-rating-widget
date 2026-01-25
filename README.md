@@ -19,20 +19,22 @@
 ### Method 1: Twitch Chat Commands (Recommended!)
 This is the easiest way for you and your mods to update points during stream.
 
-**Setup:**
+**Setup (One-time):**
 1. Right-click the browser source in Streamlabs OBS → "Interact"
-2. Hover over the widget to reveal controls
-3. In the "TWITCH INTEGRATION" section:
+2. Hover over the widget to reveal the full-screen controls
+3. In the "TWITCH INTEGRATION" section (left side):
    - Enter your Twitch channel name (e.g., "your_username")
    - Click "Connect"
    - Wait for status to show "Connected"
 4. Close the interact window
 
+**Note:** Your channel name is saved automatically and the widget will auto-connect on next page load!
+
 **Usage in Twitch Chat:**
-- `!points +200` - Add 200 points (after a win)
-- `!points -400` - Subtract 400 points (after a loss)
-- `!points +150` - Add any amount
-- `!points -600` - Subtract any amount
+- `!don +200` - Add 200 points (after a win)
+- `!don -400` - Subtract 400 points (after a loss)
+- `!don +150` - Add any amount
+- `!don -600` - Subtract any amount
 
 **Permissions:**
 - Only **you** (the broadcaster) and **mods** can use this command
@@ -41,8 +43,8 @@ This is the easiest way for you and your mods to update points during stream.
 ### Method 2: Interactive Controls
 1. Right-click the browser source in Streamlabs OBS
 2. Select "Interact"
-3. Hover over the widget to reveal the control panel
-4. Use the buttons:
+3. Hover over the widget to reveal the full-screen control panel
+4. Use the "MANUAL CONTROLS" section (right side):
    - **+100** / **+200** - Add points (after wins)
    - **-200** / **-400** - Subtract points (after losses)
    - Or type exact points in the input field and click "Set Points"
@@ -61,7 +63,9 @@ This is the easiest way for you and your mods to update points during stream.
 - **Official depth icons** from the Elden Ring Nightreign wiki
 - **Progress bar** shows how close you are to ranking up
 - **Persistent storage** - your points save between OBS sessions
-- **Twitch chat integration** - you and mods can update via `!points` command
+- **Twitch chat integration** - you and mods can update via `!don` command
+- **Auto-connect** - saves your Twitch channel and reconnects automatically on page load
+- **Full-screen controls** - hover to reveal controls that take up the entire view with side-by-side layout
 - **Depth thresholds:**
   - Depth 1: 0 → 1,000 points
   - Depth 2: 1,000 → 2,000 points
@@ -84,17 +88,17 @@ Based on the game:
 
 After a win:
 ```
-You: !points +250
+You: !don +250
 ```
 
 After a loss on Depth 5:
 ```
-Mod: !points -600
+Mod: !don -600
 ```
 
 After an early Day 1 loss:
 ```
-You: !points -400
+You: !don -400
 ```
 
 ## Troubleshooting
@@ -103,10 +107,11 @@ You: !points -400
 - Make sure your channel name is correct (lowercase, no spaces)
 - Check that you have internet access
 - Try disconnecting and reconnecting
+- Widget auto-connects on page load if you've connected before
 
 **Commands not working?**
 - Verify you're connected (status shows "Connected")
-- Make sure the command format is correct: `!points +200` or `!points -200`
+- Make sure the command format is correct: `!don +200` or `!don -200`
 - Only broadcaster and mods can use the command
 
 **Points not saving?**
