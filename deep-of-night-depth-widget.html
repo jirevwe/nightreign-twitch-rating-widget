@@ -381,10 +381,10 @@
                 <button onclick="updateFromInput()">Set Points</button>
             </div>
             <div class="control-row">
+                <button onclick="subtractPoints(200)">-200</button>
+                <button onclick="subtractPoints(100)">-100</button>
                 <button onclick="addPoints(100)">+100</button>
                 <button onclick="addPoints(200)">+200</button>
-                <button onclick="subtractPoints(200)">-200</button>
-                <button onclick="subtractPoints(400)">-100</button>
             </div>
         </div>
     </div>
@@ -484,7 +484,7 @@
 
         // Function to add points
         function addPoints(amount) {
-            currentPoints += amount;
+            currentPoints = Math.min(10000, currentPoints + amount);
             updateDisplay();
         }
 

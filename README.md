@@ -46,7 +46,7 @@ This is the easiest way for you and your mods to update points during stream.
 3. Hover over the widget to reveal the full-screen control panel
 4. Use the "MANUAL CONTROLS" section (right side):
    - **+100** / **+200** - Add points (after wins)
-   - **-200** / **-400** - Subtract points (after losses)
+   - **-100** / **-200** - Subtract points (after losses)
    - Or type exact points in the input field and click "Set Points"
 5. Close the interact window
 
