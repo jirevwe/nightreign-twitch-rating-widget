@@ -50,13 +50,6 @@ This is the easiest way for you and your mods to update points during stream.
    - Or type exact points in the input field and click "Set Points"
 5. Close the interact window
 
-### Method 3: Edit the HTML File
-1. Open `deep-of-night-depth-widget.html` in a text editor
-2. Find line 362: `let currentPoints = parseInt(localStorage.getItem('deepOfNightPoints')) || 2500;`
-3. Change `2500` to your starting points
-4. Save the file
-5. Refresh the browser source in OBS
-
 ## Features
 
 - **Auto-calculates Depth** based on your points (1-5)
