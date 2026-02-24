@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=500, height=180">
+    <meta name="viewport" content="width=450, height=120">
     <title>Deep of Night - Depth Rating</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,8 @@
         }
 
         body {
-            width: 500px;
-            height: 180px;
+            width: 450px;
+            height: 120px;
             background: transparent;
             overflow: hidden;
             font-family: 'Cinzel', serif;
@@ -40,12 +40,11 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
             width: 100%;
-            height: 100%;
+            min-height: 120px;
             background: rgba(10, 5, 20, 0.95);
             border: 1px solid var(--golden-flame);
-            padding: 20px;
+            padding: 15px;
             border-radius: 4px;
             display: none;
             z-index: 1000;
@@ -121,65 +120,11 @@
         /* Main Container */
         .depth-container {
             position: relative;
-            background: linear-gradient(135deg, rgba(10, 5, 20, 0.95) 0%, rgba(26, 15, 46, 0.9) 100%);
-            border: 2px solid var(--golden-flame);
-            padding: 20px 25px;
-            clip-path: polygon(
-                25px 0, calc(100% - 25px) 0, 100% 25px,
-                100% calc(100% - 25px), calc(100% - 25px) 100%,
-                25px 100%, 0 calc(100% - 25px), 0 25px
-            );
-            box-shadow:
-                inset 0 0 40px rgba(0, 0, 0, 0.6),
-                0 0 50px rgba(212, 175, 55, 0.3),
-                0 0 100px rgba(139, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            animation: pulse-border 4s infinite ease-in-out;
+            background: transparent;
+            padding: 10px;
             display: flex;
             align-items: center;
-            gap: 25px;
-        }
-
-        @keyframes pulse-border {
-            0%, 100% {
-                box-shadow:
-                    inset 0 0 40px rgba(0, 0, 0, 0.6),
-                    0 0 50px rgba(212, 175, 55, 0.3),
-                    0 0 100px rgba(139, 0, 0, 0.2);
-            }
-            50% {
-                box-shadow:
-                    inset 0 0 50px rgba(0, 0, 0, 0.7),
-                    0 0 70px rgba(212, 175, 55, 0.5),
-                    0 0 120px rgba(139, 0, 0, 0.4);
-            }
-        }
-
-        .depth-container::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg,
-                var(--golden-flame) 0%,
-                var(--crimson-variant) 50%,
-                var(--golden-flame) 100%);
-            clip-path: polygon(
-                25px 0, calc(100% - 25px) 0, 100% 25px,
-                100% calc(100% - 25px), calc(100% - 25px) 100%,
-                25px 100%, 0 calc(100% - 25px), 0 25px
-            );
-            z-index: -1;
-            opacity: 0.2;
-            filter: blur(6px);
-            animation: rotate-gradient 8s linear infinite;
-        }
-
-        @keyframes rotate-gradient {
-            0% { filter: blur(6px) hue-rotate(0deg); }
-            100% { filter: blur(6px) hue-rotate(360deg); }
+            gap: 15px;
         }
 
         /* Left side - Icon */
@@ -188,79 +133,60 @@
         }
 
         .depth-icon {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
-            animation: icon-glow 3s infinite ease-in-out;
-        }
-
-        @keyframes icon-glow {
-            0%, 100% {
-                filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
-            }
-            50% {
-                filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
-            }
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
         /* Right side - Info */
         .info-section {
-            flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
         }
 
         .depth-title {
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.7);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            display: none;
         }
 
         .points-display {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
+            color: #333;
             letter-spacing: 1px;
-            text-shadow:
-                0 0 10px rgba(212, 175, 55, 0.4),
-                0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .points-value {
-            color: var(--golden-flame);
+            color: #222;
             font-weight: 700;
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .points-bar-container {
-            width: 100%;
-            height: 12px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 6px;
+            width: 280px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
             overflow: hidden;
             position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .points-bar {
             height: 100%;
             background: linear-gradient(90deg,
-                var(--crimson-variant) 0%,
-                var(--golden-flame) 50%,
-                var(--arcane-gold) 100%);
+                #2d1b4e 0%,
+                #5e3a8c 40%,
+                #8b5fbf 70%,
+                #b088d4 100%);
             width: 0%;
             transition: width 0.5s ease-out;
-            box-shadow:
-                0 0 10px rgba(212, 175, 55, 0.6),
-                inset 0 0 8px rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
             position: relative;
             overflow: hidden;
-            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(139, 95, 191, 0.5);
         }
 
         .points-bar::after {
@@ -281,80 +207,9 @@
             0% { left: -100%; }
             100% { left: 200%; }
         }
-
-        /* Corner decorations */
-        .corner {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--arcane-gold);
-            opacity: 0.6;
-        }
-
-        .corner-tl {
-            top: 12px;
-            left: 12px;
-            border-right: none;
-            border-bottom: none;
-        }
-
-        .corner-tr {
-            top: 12px;
-            right: 12px;
-            border-left: none;
-            border-bottom: none;
-        }
-
-        .corner-bl {
-            bottom: 12px;
-            left: 12px;
-            border-right: none;
-            border-top: none;
-        }
-
-        .corner-br {
-            bottom: 12px;
-            right: 12px;
-            border-left: none;
-            border-top: none;
-        }
-
-        /* Ambient particles */
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: var(--golden-flame);
-            border-radius: 50%;
-            opacity: 0;
-            animation: float-particle 8s infinite ease-in-out;
-            pointer-events: none;
-        }
-
-        @keyframes float-particle {
-            0%, 100% {
-                opacity: 0;
-                transform: translateY(0) translateX(0);
-            }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.6; }
-            100% {
-                transform: translateY(-150px) translateX(50px);
-            }
-        }
-
-        .particle:nth-child(1) { left: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 50%; animation-delay: 2s; }
-        .particle:nth-child(3) { left: 80%; animation-delay: 4s; }
-        .particle:nth-child(4) { left: 35%; animation-delay: 6s; }
     </style>
 </head>
 <body>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-
     <!-- Interactive Controls (shown on hover) -->
     <div class="controls" hidden="hidden">
         <div class="control-section">
@@ -390,11 +245,6 @@
     </div>
 
     <div class="depth-container">
-        <div class="corner corner-tl"></div>
-        <div class="corner corner-tr"></div>
-        <div class="corner corner-bl"></div>
-        <div class="corner corner-br"></div>
-
         <!-- Left: Depth Icon -->
         <div class="icon-section">
             <img id="depthIcon" class="depth-icon" src="images/depth-3.png" alt="Depth 3">
@@ -402,12 +252,11 @@
 
         <!-- Right: Info -->
         <div class="info-section">
-            <div class="depth-title">DoN Depth Rating</div>
-            <div class="points-display">
-                <span class="points-value" id="currentPoints">2500</span> / <span id="nextRankPoints">4000</span>
-            </div>
             <div class="points-bar-container">
                 <div class="points-bar" id="pointsBar"></div>
+            </div>
+            <div class="points-display">
+                <span class="points-value" id="currentPoints">2500</span> / <span id="nextRankPoints">4000</span>
             </div>
         </div>
     </div>
